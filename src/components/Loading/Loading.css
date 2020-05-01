@@ -1,0 +1,12 @@
+.Loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Loading {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #000;
+    border-radius: 50%;
+}

@@ -1,12 +1,15 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import './Loading.css'
 
 const Loading = (props) => {
 
     const { height, width } = props;
 
     return (
-        <div className="Loading" style={{ height, width }}/>
+        <div className="Loading-container">
+            <div className="Loading" style={{ height, width }}/>
+        </div>
     )
 
 }

@@ -43,14 +43,13 @@ export default class List extends React.Component {
             return <div className="loading-container">componente de loading</div>
         }
 
-        <ul>
+        <div class="flex mb-4">
             {customers.map(customer => {
-                <li key={customer.id}>
-                    <li>{customer.name}</li>
-                    <li>{customer.age}</li>
-                </li>
+                <div class="w-1/3 bg-gray-500 h-12" key={customer.id}>
+                    <div class="w-1/3 bg-gray-500 h-12">{customer.name}</div>
+                    <div class="w-1/3 bg-gray-500 h-12">{customer.age}</div>'
+                </div>
             })}
-        </ul>
+        </div>
     }
-
 }
