@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../../public/logo.png'
+const logo = '../../../public/logo512.png'
 
 const Header = () => {
 

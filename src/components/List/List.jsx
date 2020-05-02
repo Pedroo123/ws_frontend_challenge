@@ -1,5 +1,7 @@
 import React from 'react';
+import Table from '../Table/Table';
 import { responseHandle } from '../Helpers/helpers';
+import Loading from '../Loading/Loading';
 
 export default class List extends React.Component {
 
@@ -18,11 +20,13 @@ export default class List extends React.Component {
     }
 
     fetchApiData() {
-        fetch('http://localhost:3000')
+        fetch('http://localhost:4000/customers')
             .then(responseHandle)
             .then((data) => {
 
                 const { customers } = data
+
+                console.log('Successfull Request', data);
 
                 this.setState({ loading: false, customers })
             })
@@ -33,23 +37,20 @@ export default class List extends React.Component {
 
     render() {
 
-        const { customers, loading, error } = this.state;
-
-        if (error) {
-            return <div className="error-container">{error}</div>
-        }
+        const { loading, error, customers } = this.state;
 
         if (loading) {
-            return <div className="loading-container">componente de loading</div>
+            return <Loading />
         }
 
-        <div class="flex mb-4">
-            {customers.map(customer => {
-                <div class="w-1/3 bg-gray-500 h-12" key={customer.id}>
-                    <div class="w-1/3 bg-gray-500 h-12">{customer.name}</div>
-                    <div class="w-1/3 bg-gray-500 h-12">{customer.age}</div>'
-                </div>
-            })}
-        </div>
+        if (error) {
+            return <div>{this.state.error}</div>
+        }
+
+        return (
+            <div>
+                <Table customers={customers}/>
+            </div>
+        )
     }
 }

@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Switch, BrowserRouter, Route } from 'react-router-dom';
+import List from '../src/components/List/List';
+import Home from '../src/components/Home/Home'
 import './index.css';
-import App from './App';
-import { browserRouter, Switch } from 'react-router-dom';
+
+
+const App = () => {
+  
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" component={Home}/>
+        <Route path="/currencies" component={List} exact/>
+      </Switch>
+    </BrowserRouter>
+  )
+
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App />,
   document.getElementById('root')
 );

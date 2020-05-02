@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Home = () => {
+const Home = (props) => {
+
+    const { history } = props;
 
     return (
         
@@ -10,7 +12,7 @@ const Home = () => {
             </h2>
             
             <div className="Button-Container">
-                <button type="submit">Enter</button>
+                <button type="submit" onClick={() => history.push(`/currencies`)}>Enter</button>
             </div>
         </div>
     );
