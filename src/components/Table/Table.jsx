@@ -6,7 +6,7 @@ import './Table.css';
 const Table = (props) => {
 
     const { customers, history } = props;
-
+    console.log('Table props', props);
     return (
         <div className="table-container">
             <table className="table">
@@ -31,7 +31,7 @@ const Table = (props) => {
                                 <span className="table-data">{customer.age}</span>
                             </td>
                             <td>
-                                <span className="table-data">{customer.initalValue}</span>
+                                <span className="table-data">{customer.initialValue}</span>
                             </td>
                             <td>
                                 <span className="customer-name">{customer.finalValue}</span>

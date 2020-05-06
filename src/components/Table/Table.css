@@ -1,0 +1,32 @@
+.table-container {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-head {
+    background-color: #261447;
+}
+
+.table-head tr th {
+    padding: 8px 16px;
+    color: #FF3864;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.table-body {
+    text-align: left;
+    background-color: #CC978E;
+}
+
+.table-body tr td {
+    cursor: pointer;
+    padding: 24px 20px;
+    color: #fff;
+    border-bottom: 2px solid #261447;
+}

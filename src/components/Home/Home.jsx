@@ -3,16 +3,16 @@ import React from 'react';
 const Home = (props) => {
 
     const { history } = props;
-
+    console.log(props);
     return (
         
         <div className="Home-Container">
             <h2>
-                Welcome to the User register system!
+                Teste
             </h2>
             
             <div className="Button-Container">
-                <button type="submit" onClick={() => history.push(`/currencies`)}>Enter</button>
+                <button type="submit" onClick={() => history.push(`/customers`)}>Enter</button>
             </div>
         </div>
     );

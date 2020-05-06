@@ -4,10 +4,10 @@ import propTypes from 'prop-types';
 
 const Card = (props) => {
 
-    const { size, children, width } = props;
+    const { children, width } = props;
 
     return (
-        <div size={size} style={{ width }}>
+        <div style={{ width }}>
             {children}
         </div>
     )
@@ -17,8 +17,7 @@ const Card = (props) => {
 export default Card;
 
 Card.defaultProps = {
-    width: '300px',
-    size: 'sm'
+    width: '300px'
 }
 
 Card.propTypes = {

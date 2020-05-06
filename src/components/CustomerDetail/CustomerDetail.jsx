@@ -1,5 +1,8 @@
 import React from 'react';
 import { responseHandle } from '../Helpers/helpers';
+import Avatar from '../Avatar/Avatar';
+import Loading from '../Loading/Loading';
+import Card from '../Card/Card';
 
 class CustomerDetail extends React.Component {
     
@@ -20,7 +23,7 @@ class CustomerDetail extends React.Component {
         this.fetchCustomer(customerId);
     }
 
-    componentDidUpdate(nextProps) {
+    shouldComponentUpdate(nextProps) {
         if (this.props.location.pathName !== nextProps.location.pathName) {
             const newCustomerId = nextProps.match.params.id;
 
@@ -39,14 +42,34 @@ class CustomerDetail extends React.Component {
                 })
             })
             .catch((error) => {
-                console.log(error)
+                this.setState({
+                    loading: false,
+                    error
+                })
             })
     }
 
     render() {
+
+        const { loading, error, customer } = this.state;
+
+        if (loading) {
+            return <Loading />
+        }
+
+        if (error) {
+            return <div>{error}</div>
+        }
+
         return (
             <div className="details-container">
-
+                <Card>
+                    <Avatar />
+                    <p>{customer.name}</p>
+                    <p>{customer.age}</p>
+                    <p>{customer.initialValue}</p>
+                    <p>{customer.finalValue}</p>
+                </Card>
             </div>
         )
     }

@@ -1,7 +1,8 @@
 import React from 'react';
 import Table from '../Table/Table';
-import { responseHandle } from '../Helpers/helpers';
 import Loading from '../Loading/Loading';
+import { responseHandle } from '../Helpers/helpers';
+import { API_URL } from '../../config';
 
 export default class List extends React.Component {
 
@@ -20,15 +21,14 @@ export default class List extends React.Component {
     }
 
     fetchApiData() {
-        fetch('http://localhost:4000/customers')
+        fetch(`${API_URL}`)
             .then(responseHandle)
             .then((data) => {
-
-                const { customers } = data
-
                 console.log('Successfull Request', data);
 
-                this.setState({ loading: false, customers })
+                const { customers } = data;
+
+                this.setState({ customers, loading: false })
             })
             .catch((error) => {
                 console.log(error)
