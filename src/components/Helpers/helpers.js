@@ -1,5 +1,3 @@
-import React from 'react';
- 
 /**
  * Handles the response that comes from the API
  * @param {Object} response

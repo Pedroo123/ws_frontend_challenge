@@ -8,9 +8,9 @@ const Table = (props) => {
     const { customers, history } = props;
     console.log('Table props', props);
     return (
-        <div className="table-container">
-            <table className="table">
-                <thead className="table-head">
+        <div className="Table-container">
+            <table className="Table">
+                <thead className="Table-head">
                     <tr>
                         <th>Name</th>
                         <th>Age</th>
@@ -18,23 +18,23 @@ const Table = (props) => {
                         <th>Final Value</th>
                     </tr>
                 </thead>
-                <tbody className="table-body">
+                <tbody className="Table-body">
                     {customers.map((customer) => (
                         <tr 
                             key={customer.id}
                             onClick={() => history.push(`/customers/${customer.id}`)}
                         >
                             <td>
-                                <span className="table-data">{customer.name}</span>
+                                <span className="Table-data">{customer.name}</span>
                             </td>
                             <td>
-                                <span className="table-data">{customer.age}</span>
+                                <span className="Table-data">{customer.age}</span>
                             </td>
                             <td>
-                                <span className="table-data">{customer.initialValue}</span>
+                                <span className="Table-data">{customer.initialValue}</span>
                             </td>
                             <td>
-                                <span className="customer-name">{customer.finalValue}</span>
+                                <span className="Table-data">{customer.finalValue}</span>
                             </td>
                         </tr>
                     ))}

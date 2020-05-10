@@ -1,15 +1,14 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import './Card.css'
 
 
 const Card = (props) => {
 
-    const { children, width } = props;
+    const { width, height } = props;
 
     return (
-        <div style={{ width }}>
-            {children}
-        </div>
+        <div className="Card" style={{ width, height }} />
     )
 
 }
@@ -17,11 +16,11 @@ const Card = (props) => {
 export default Card;
 
 Card.defaultProps = {
-    width: '300px'
+    width: '300px',
+    height: '420px'
 }
 
 Card.propTypes = {
     width: propTypes.string,
-    size: propTypes.string,
-    children: propTypes.node
+    height: propTypes.string
 }

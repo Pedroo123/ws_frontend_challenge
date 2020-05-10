@@ -1,0 +1,74 @@
+{
+  "customers": [
+    {
+        "id": 1,
+        "name": "Pedro Brancalhao",
+        "age": 24,
+        "initialValue": 1500,
+        "finalValue": 8560
+    },
+    {
+        "id": 2,
+        "name": "Sullivan",
+        "age": 3,
+        "initialValue": 2000,
+        "finalValue": 10800
+    },
+    {
+        "id": 3,
+        "name": "Pepper",
+        "age": 3,
+        "initialValue": 6000,
+        "finalValue": 3500
+    },
+    {
+        "id": 4,
+        "name": "Eros",
+        "age": 2,
+        "initialValue": 5000,
+        "finalValue": 14210
+    },
+    {
+      "id": 5,
+      "name": "Yui",
+      "age": 2,
+      "initialValue": 5000,
+      "finalValue": 14210
+    },
+    {
+      "id": 6,
+      "name": "Edward",
+      "age": 2,
+      "initialValue": 5000,
+      "finalValue": 14210
+    },
+    {
+      "id": 7,
+      "name": "Bakugou",
+      "age": 16,
+      "initialValue": 230,
+      "finalValue": 1025
+    },
+    {
+      "id": 8,
+      "name": "Kirishima",
+      "age": 16,
+      "initialValue": 8000,
+      "finalValue": 14210
+    },
+    {
+      "id": 9,
+      "name": "Tracer",
+      "age": 30,
+      "initialValue": 9000,
+      "finalValue": 5000
+    },
+    {
+      "id": 10,
+      "name": "Reinhardt",
+      "age": 55,
+      "initialValue": 10000,
+      "finalValue": 11000
+    }
+  ]
+}

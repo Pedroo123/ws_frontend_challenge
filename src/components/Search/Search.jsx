@@ -1,4 +1,5 @@
 import React from 'react';
+import './Search.css'
 
 class Search extends React.Component {
 
@@ -18,8 +19,8 @@ class Search extends React.Component {
 
     render() {
         return(
-            <div className="search-container">
-                <input type="text" value={this.state.value} onChange={this.handleChange} placeholder="Type a customer name"/>
+            <div className="Search">
+                <input className="Search-Input" type="text" value={this.state.value} onChange={this.handleChange} placeholder="Type a customer name"/>
             </div>
         )
     }

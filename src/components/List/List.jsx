@@ -21,14 +21,10 @@ export default class List extends React.Component {
     }
 
     fetchApiData() {
-        fetch(`${API_URL}`)
+        fetch(`${API_URL}/customers`)
             .then(responseHandle)
             .then((data) => {
-                console.log('Successfull Request', data);
-
-                const { customers } = data;
-
-                this.setState({ customers, loading: false })
+                this.setState({ customers: data, loading: false })  
             })
             .catch((error) => {
                 console.log(error)
