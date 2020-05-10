@@ -1,14 +1,14 @@
 import React from 'react';
 import propTypes from 'prop-types';
-const defaultAvatar = '../../assets/defaultAvatar.png';
+import defaultAvatar from '../../assets/defaultAvatar.png'
 
 const Avatar = (props) => {
 
     const { height, width } = props;
 
     return (
-        <div className="Avatar-containter" style={{ height, width }}>
-            <img src={defaultAvatar}></img>
+        <div style={{ height, width }}>
+            <img alt="customer-avatar" src={defaultAvatar}></img>
         </div>
     )
 

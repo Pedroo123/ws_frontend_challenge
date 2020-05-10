@@ -23,21 +23,26 @@ class CustomerDetail extends React.Component {
         this.fetchCustomer(customerId);
     }
 
-    shouldComponentUpdate(nextProps) {
-        if (this.props.location.pathname !== nextProps.location.pathname) {
-            const newCustomerId = nextProps.match.params.id;
+    /**
+     * Este hook so seria executado em caso do update do componente, como por exemplo, 
+     * um search que redireciona à pagina de detalhes, ou, uma alteração de dado por parte da API
+     * Como estou utilizando dados estaticos, este metodo sempre retorna false
+     * Deixei aqui apenas como exemplo de como eu faria.
+     */
 
-            this.fetchCustomer(newCustomerId);
-        }
-        return false;
-    }
+    // shouldComponentUpdate(nextProps) {
+    //     if (this.props.location.pathname !== nextProps.location.pathname) {
+    //         const newCustomerId = nextProps.match.params.id;
+
+    //         this.fetchCustomer(newCustomerId);
+    //     }
+    //     return false;
+    // }
 
     fetchCustomer(customerId) {
         fetch(`${API_URL}/customers/${customerId}`)
             .then(responseHandle)
             .then((customer) => {
-                console.log('Resposta', customer)
-                console.log('Usuario clicado', customer.name)
                 this.setState({
                     loading: false,
                     error: null,
@@ -53,7 +58,6 @@ class CustomerDetail extends React.Component {
     }
 
     render() {
-
         const { loading, error, customer } = this.state;
 
         if (loading) {

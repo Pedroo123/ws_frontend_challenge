@@ -10,9 +10,9 @@
   
   .Header-logo {
     position: absolute;
-    top: 30px;
+    top: 20px;
     left: 20px;
-    width: 90px;
+    width: 40px;
   }
   
   @media (max-width: 700px) {

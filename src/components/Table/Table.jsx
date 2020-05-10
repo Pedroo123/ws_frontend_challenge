@@ -6,7 +6,6 @@ import './Table.css';
 const Table = (props) => {
 
     const { customers, history } = props;
-    console.log('Table props', props);
     return (
         <div className="Table-container">
             <table className="Table">
