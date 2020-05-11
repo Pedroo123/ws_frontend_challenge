@@ -1,3 +1,5 @@
+# Boilerplate
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -17,52 +19,45 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### `npm mock`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Launches the mock on the port **4000**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+-----------------
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+### Components
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Structured with functional and class components.
+- The functional components have some writtens tests.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### CSS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- CSS3 only
+- Decided not to use a framework because i wanted to make it simple, and quick.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Static Data
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- The decision behind this was again, work quickly and simple as possible. Mocking an API that could POST, GET, PUT and also DELETE an information would take more time.
+- I could search for some public APIs to fetch info, but the idea came to my mind just before I finish the project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+-----------------
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Things I wanted to do.
 
-### Analyzing the Bundle Size
+- I wanted to make it as simple and quickly as possible. I dont know how much time I have avaliable, so that is the reason I made that decision.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- I wanted to make it bigger, with more details and some graphics to make it prettier. But as I said before, it would take a bit more effort and thus, more time.
 
-### Making a Progressive Web App
+- Some things I left with a comment. Those are things that I would do if I'd encounter myself on the situation mentioned on the comment. I hope you can read those carefully.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
+--------------------
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Final note
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- I hope you like it. It took me around a week to do it. Working on it about an hour per day. Thats the free time that I had during those days, and I used it totally on the project.
+- I loved the experience and learned a lot during the process. Thanks for the opportunity.
