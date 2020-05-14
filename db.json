@@ -1,7 +1,6 @@
 {
   "customer": [
     {
-      "id": 1,
       "name": "Pedro Brancalhao",
       "age": 24,
       "initialValue": 1500,
