@@ -16,6 +16,10 @@ export default class OpportunityCard extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.fetchOpportunityData();
+    }
+
     fetchOpportunityData() {
         fetch(`${API_URL}/opportunities`)
             .then(responseHandle)
@@ -29,10 +33,6 @@ export default class OpportunityCard extends React.Component {
             .catch((error) => {
                 console.log(error)
             })
-    }
-
-    componentDidMount() {
-        this.fetchOpportunityData();
     }
 
     render() {
