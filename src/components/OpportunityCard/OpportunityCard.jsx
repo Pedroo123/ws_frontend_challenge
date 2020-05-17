@@ -14,16 +14,16 @@ export default class OpportunityCard extends React.Component {
             error: null,
             loading: false
         }
-    }
 
-    componentDidMount() {
-        this.fetchOpportunityData();
+        console.log(this.state.opportunities)
     }
 
     fetchOpportunityData() {
         fetch(`${API_URL}/opportunities`)
             .then(responseHandle)
             .then((data) => {
+                console.log('Response data', data)
+                console.log('Test', data)
                 this.setState({ 
                     opportunities: data,
                     error: null,
@@ -35,10 +35,14 @@ export default class OpportunityCard extends React.Component {
             })
     }
 
+    componentDidMount() {
+        this.fetchOpportunityData();
+    }
+
     render() {
 
         const { opportunities, error, loading } = this.state;
-
+        console.log('Before render', opportunities.won);
         if (loading) {
             return <div><Loading /></div>
         }
@@ -49,7 +53,7 @@ export default class OpportunityCard extends React.Component {
 
         return(
             <div className="Opportunity-card">
-                <Card>
+                {/* <Card>
                     <span className="Opportunities-won">{opportunities.won.totalWonOpportunities}</span>
                     <span className="Opportunities-won-value">{opportunities.won.totalValue}</span>
 
@@ -60,7 +64,9 @@ export default class OpportunityCard extends React.Component {
                     <span className="Opportunities-open-value">{opportunities.open.totalOpenValue}</span>
 
                     <span className="Opportunities-canceled">{opportunities.canceled.totalCanceledOpportunities}</span>
-                </Card>
+                </Card> */}
+
+                teste
             </div>
         )
     }
