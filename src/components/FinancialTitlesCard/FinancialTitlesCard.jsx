@@ -28,9 +28,32 @@ export default class FinancialTitlesCard extends React.Component {
             });
     }
 
+    componentDidMount() {
+        this.fetchFinantialTitlesData();
+    }
+
     render() {
 
         const { titulos, error, loading } = this.state;
+        console.log('Titulos financeiros', titulos)
+        const mappedtTitulos = titulos.map((items) =>
+            <Card>
+                <div className="Vencidos">
+                        <span className="Financial-titles-vencidos-total">{items.vencidos.totalVencidos}</span>
+                        <span className="Financial-titles-vencidos-value">{items.vencidos.totalVencidosValue}</span>
+                    </div>
+
+                    <div className="Para-vencer">
+                        <span className="Financial-titles-para-vencer-total">{items.paraVencer.totalParaVencer}</span>
+                        <span className="Financial-titles-para-vencer-value">{items.paraVencer.totalParaVencerValue}</span>
+                    </div>
+
+                    <div className="Pagos">
+                        <span className="Financial-titles-pagos-total">{items.pagos.totalPagos}</span>
+                        <span className="Financial-titles-pagos-value">{items.pagos.totalPagosValue}</span>
+                    </div>
+            </Card>
+        );
 
         if (loading) {
             return <div><Loading /></div>
@@ -42,23 +65,7 @@ export default class FinancialTitlesCard extends React.Component {
 
         return(
             <div className="Financial-titles-card">
-                {/* <Card>
-                    <div className="Vencidos">
-                        <span className="Financial-titles-vencidos">{titulos.vencidos[0].value}</span>
-                        <span className="Financial-titles-vencidos">{titulos.vencidos[1].value}</span>
-                        <span className="Financial-titles-vencidos">{titulos.vencidos[2].value}</span>
-                    </div>
-
-                    <div className="Para-vencer">
-                        <span className="Financial-titles-para-vencer">{titulos.aVencer.value}</span>
-                    </div>
-
-                    <div className="Pagos">
-                        <span className="Financial-titles-vencidos">{titulos.pagos[0].value}</span>
-                        <span className="Financial-titles-vencidos">{titulos.pagos[1].value}</span>
-                    </div>
-                </Card> */}
-                teste
+                {mappedtTitulos}
             </div>
         )
     }

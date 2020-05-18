@@ -39,7 +39,6 @@ export default class CustomerCard extends React.Component {
 
     render() {
         const { customer, error, loading } = this.state;
-        console.log('render', customer)
         if (loading) {
             return <div><Loading /></div>
         }

@@ -22,8 +22,6 @@ export default class OpportunityCard extends React.Component {
         fetch(`${API_URL}/opportunities`)
             .then(responseHandle)
             .then((data) => {
-                console.log('Response data', data)
-                console.log('Test', data)
                 this.setState({ 
                     opportunities: data,
                     error: null,
@@ -40,9 +38,31 @@ export default class OpportunityCard extends React.Component {
     }
 
     render() {
-
         const { opportunities, error, loading } = this.state;
-        console.log('Before render', opportunities.won);
+
+        const mappedOpportunities = opportunities.map((items) => 
+            <Card>
+                <div key={items.won.id} className="Opportunities-won">
+                    <span  className="Opportunities-won-total">{items.won.totalWonOpportunities}</span>
+                    <span className="Opportunities-won-value">{items.won.totalValue}</span>
+                </div>
+                
+                <div key={items.lost.id} className="Opportunities-lost">
+                    <span className="Opportunities-lost-total">{items.lost.totalLostOpportunities}</span>
+                    <span className="Opportunities-lost-value">{items.lost.totalLostValue}</span>
+                </div>
+
+                <div key={items.open.id} className="Opportunities-open">
+                    <span key={items.open.id} className="Opportunities-open-total">{items.open.totalOpenOpportunities}</span>
+                    <span className="Opportunities-open-value">{items.open.totalOpenValue}</span>
+                </div>
+
+                <div key={items.canceled.id} className="Opportunities-canceled">
+                    <span key={items.canceled.id} className="Opportunities-canceled-total">{items.canceled.totalCanceledOpportunities}</span>
+                </div>
+            </Card>
+        );
+
         if (loading) {
             return <div><Loading /></div>
         }
@@ -53,20 +73,7 @@ export default class OpportunityCard extends React.Component {
 
         return(
             <div className="Opportunity-card">
-                {/* <Card>
-                    <span className="Opportunities-won">{opportunities.won.totalWonOpportunities}</span>
-                    <span className="Opportunities-won-value">{opportunities.won.totalValue}</span>
-
-                    <span className="Opportunities-lost">{opportunities.lost.totalLostOpportunities}</span>
-                    <span className="Opportunities-lost-value">{opportunities.lost.totalLostValue}</span>
-
-                    <span className="Opportunities-open">{opportunities.open.totalOpenOpportunities}</span>
-                    <span className="Opportunities-open-value">{opportunities.open.totalOpenValue}</span>
-
-                    <span className="Opportunities-canceled">{opportunities.canceled.totalCanceledOpportunities}</span>
-                </Card> */}
-
-                teste
+                {mappedOpportunities}
             </div>
         )
     }
