@@ -3,6 +3,7 @@ import { API_URL } from '../../config';
 import { responseHandle } from '../Helpers/helpers';
 import { Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart } from 'recharts';
 import Loading from '../Loading/Loading';
+import Card from '../Card/Card';
 
 export default class CharsCard extends React.Component {
 
@@ -53,20 +54,22 @@ export default class CharsCard extends React.Component {
 
         return (
             <div className="Customer-chart-card">
-                <BarChart
-                    width={500}
-                    height={300}
-                    data={chartData}
-                    margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-                >
-                    <CartesianGrid strokeDasharray="3 3"/>
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Bar dataKey="iv" fill="#8884d8" />
-                    <Bar dataKey="fv" fill="#82ca9d" />
-                </BarChart>
+                <Card width={520} height={320}>
+                    <BarChart
+                        width={500}
+                        height={300}
+                        data={chartData}
+                        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                    >
+                        <CartesianGrid strokeDasharray="3 3"/>
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Bar dataKey="iv" fill="#8884d8" />
+                        <Bar dataKey="fv" fill="#82ca9d" />
+                    </BarChart>
+                </Card>
             </div>
         )
     }

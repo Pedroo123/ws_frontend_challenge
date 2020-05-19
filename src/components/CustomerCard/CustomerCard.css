@@ -1,0 +1,17 @@
+.Customer-card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.Customer-name {
+    display: flex;
+}
+
+.Name {
+    font-size: 14px;
+}
+
+.Customer-initialValue-container {
+    position: relative;
+}

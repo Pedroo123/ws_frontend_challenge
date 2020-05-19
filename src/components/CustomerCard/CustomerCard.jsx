@@ -4,6 +4,7 @@ import { responseHandle } from '../Helpers/helpers';
 import Loading from '../Loading/Loading';
 import Card from '../Card/Card';
 import Avatar from '../Avatar/Avatar';
+import './CustomerCard.css';
 
 export default class CustomerCard extends React.Component {
 
@@ -51,20 +52,20 @@ export default class CustomerCard extends React.Component {
             <div className="Customer-Card">
                 <Card>
                     <Avatar />
-                    <h2 className="Customer-name">
-                        {customer.name}
-                    </h2>
+                    <div className="Customer-name">
+                        <span className="Name">Name: {customer.name}</span>
+                    </div>
                     <div className="Customer-initialValue-container">
-                        <span className="Customer-initialValue">{customer.initialValue}</span>
+                        <span className="Customer-initialValue">Initial Value: {customer.initialValue}</span>
                     </div>
                     <div className="Customer-finalValue-container">
-                        <span className="Customer-finalValue">{customer.finalValue}</span>
+                        <span className="Customer-finalValue">Final Value: {customer.finalValue}</span>
                     </div>
                     <div className="Customer-phone-container">
-                        <span className="Customer-phone">{customer.phone}</span>
+                        <span className="Customer-phone">Phone: {customer.phone}</span>
                     </div>
                     <div className="Customer-email-container">
-                        <span className="Customer-email">{customer.email}</span>
+                        <span className="Customer-email">Email: {customer.email}</span>
                     </div>
                 </Card>
             </div>

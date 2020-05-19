@@ -1,5 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import './Card.css';
 
 const Card = (props) => {
 
@@ -7,7 +8,6 @@ const Card = (props) => {
 
     return (
         <div className="Card" style={{ width, height }}>
-            <div className="Card-header" />
             <div className="Card-content">
                 {children}
             </div>
@@ -16,7 +16,7 @@ const Card = (props) => {
 }
 
 Card.defaultProps = {
-    width: '300px',
+    width: '420px',
     height: '240px'
 }
 
