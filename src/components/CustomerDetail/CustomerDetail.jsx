@@ -5,6 +5,7 @@ import FinancialTitlesCard from '../FinancialTitlesCard/FinancialTitlesCard';
 import ChartsCard from '../ChartsCard/ChartsCard';
 import Loading from '../Loading/Loading';
 import './CustomerDetail.css';
+import { MapsCard } from '../MapsCard/MapsCard';
 
 class CustomerDetail extends React.Component {
     
@@ -35,6 +36,7 @@ class CustomerDetail extends React.Component {
                     <OpportunityCard />
                     <FinancialTitlesCard />
                     <ChartsCard />
+                    <MapsCard />
                 </div>        
             </>
         )
