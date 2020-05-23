@@ -33,9 +33,9 @@ class CustomerDetail extends React.Component {
             <>
                 <div className="Right-card-container">
                     <CustomerCard />
+                    <ChartsCard />
                     <OpportunityCard />
                     <FinancialTitlesCard />
-                    <ChartsCard />
                     <MapsCard />
                 </div>        
             </>

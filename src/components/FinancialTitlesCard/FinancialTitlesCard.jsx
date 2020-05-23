@@ -33,9 +33,8 @@ export default class FinancialTitlesCard extends React.Component {
     }
 
     render() {
-
         const { titulos, error, loading } = this.state;
-        console.log('Titulos financeiros', titulos)
+        
         const mappedtTitulos = titulos.map((items) =>
             <Card>
                 <div className="Vencidos">

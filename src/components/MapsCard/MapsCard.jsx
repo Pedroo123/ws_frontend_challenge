@@ -48,5 +48,5 @@ export class MapsCard extends React.Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: ('AIzaSyDEDhiDFqiSqwBn6fbBd8QJRTQpgKJjYhE')
+    apiKey: 'AIzaSyDEDhiDFqiSqwBn6fbBd8QJRTQpgKJjYhE'
 }) (MapsCard)

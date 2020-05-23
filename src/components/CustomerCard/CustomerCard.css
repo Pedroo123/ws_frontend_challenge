@@ -6,6 +6,7 @@
 
 .Customer-name {
     display: flex;
+    position: relative;
 }
 
 .Name {

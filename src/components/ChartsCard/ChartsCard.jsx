@@ -4,6 +4,7 @@ import { responseHandle } from '../Helpers/helpers';
 import { Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart } from 'recharts';
 import Loading from '../Loading/Loading';
 import Card from '../Card/Card';
+import './ChartsCard.css';
 
 export default class CharsCard extends React.Component {
 
