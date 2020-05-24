@@ -14,8 +14,6 @@ export default class OpportunityCard extends React.Component {
             error: null,
             loading: false
         }
-
-        console.log(this.state.opportunities)
     }
 
     fetchOpportunityData() {
@@ -33,35 +31,42 @@ export default class OpportunityCard extends React.Component {
             })
     }
 
+    renderOpportunities = () => {
+        const { opportunities } = this.state;
+
+        const mappedOpportunities = opportunities.map((items) => 
+        <Card>
+            <h3>Opportunities (12)</h3>
+            <div key={items.won.id} className="Opportunities-won">
+                <span  className="Opportunities-won-total">{items.won.totalWonOpportunities}</span>
+                <span className="Opportunities-won-value">{items.won.totalValue}</span>
+            </div>
+            
+            <div key={items.lost.id} className="Opportunities-lost">
+                <span className="Opportunities-lost-total">{items.lost.totalLostOpportunities}</span>
+                <span className="Opportunities-lost-value">{items.lost.totalLostValue}</span>
+            </div>
+
+            <div key={items.open.id} className="Opportunities-open">
+                <span key={items.open.id} className="Opportunities-open-total">{items.open.totalOpenOpportunities}</span>
+                <span className="Opportunities-open-value">{items.open.totalOpenValue}</span>
+            </div>
+
+            <div key={items.canceled.id} className="Opportunities-canceled">
+                <span key={items.canceled.id} className="Opportunities-canceled-total">{items.canceled.totalCanceledOpportunities}</span>
+            </div>
+        </Card>
+        );
+
+        return mappedOpportunities;
+    }
+
     componentDidMount() {
         this.fetchOpportunityData();
     }
 
     render() {
-        const { opportunities, error, loading } = this.state;
-
-        const mappedOpportunities = opportunities.map((items) => 
-            <Card>
-                <div key={items.won.id} className="Opportunities-won">
-                    <span  className="Opportunities-won-total">{items.won.totalWonOpportunities}</span>
-                    <span className="Opportunities-won-value">{items.won.totalValue}</span>
-                </div>
-                
-                <div key={items.lost.id} className="Opportunities-lost">
-                    <span className="Opportunities-lost-total">{items.lost.totalLostOpportunities}</span>
-                    <span className="Opportunities-lost-value">{items.lost.totalLostValue}</span>
-                </div>
-
-                <div key={items.open.id} className="Opportunities-open">
-                    <span key={items.open.id} className="Opportunities-open-total">{items.open.totalOpenOpportunities}</span>
-                    <span className="Opportunities-open-value">{items.open.totalOpenValue}</span>
-                </div>
-
-                <div key={items.canceled.id} className="Opportunities-canceled">
-                    <span key={items.canceled.id} className="Opportunities-canceled-total">{items.canceled.totalCanceledOpportunities}</span>
-                </div>
-            </Card>
-        );
+        const { error, loading } = this.state;
 
         if (loading) {
             return <div><Loading /></div>
@@ -73,7 +78,7 @@ export default class OpportunityCard extends React.Component {
 
         return(
             <div className="Opportunity-card">
-                {mappedOpportunities}
+                {this.renderOpportunities()}
             </div>
         )
     }

@@ -28,15 +28,12 @@ export default class FinancialTitlesCard extends React.Component {
             });
     }
 
-    componentDidMount() {
-        this.fetchFinantialTitlesData();
-    }
+    renderTitulos = () => {
+        const { titulos } = this.state;
 
-    render() {
-        const { titulos, error, loading } = this.state;
-        
         const mappedtTitulos = titulos.map((items) =>
             <Card>
+                <h3>Financial Titles</h3>
                 <div className="Vencidos">
                         <span className="Financial-titles-vencidos-total">{items.vencidos.totalVencidos}</span>
                         <span className="Financial-titles-vencidos-value">{items.vencidos.totalVencidosValue}</span>
@@ -54,6 +51,16 @@ export default class FinancialTitlesCard extends React.Component {
             </Card>
         );
 
+        return mappedtTitulos
+    }
+
+    componentDidMount() {
+        this.fetchFinantialTitlesData();
+    }
+
+    render() {
+        const { error, loading } = this.state;
+
         if (loading) {
             return <div><Loading /></div>
         }
@@ -64,7 +71,7 @@ export default class FinancialTitlesCard extends React.Component {
 
         return(
             <div className="Financial-titles-card">
-                {mappedtTitulos}
+                {this.renderTitulos()}
             </div>
         )
     }

@@ -60,36 +60,35 @@
   ],
   "activities": [
     {
-      "total": [
+      "total": 
         {
           "id": 1,
           "totalActivities": 25
         }
-      ],
-      "late": [
+      ,
+      "late": 
         {
           "id": 1,
           "totalLateActivities": 1
         }
-      ],
-      "inProgress": [
+      ,
+      "inProgress": 
         {
           "id": 1,
           "totalActivitiesInProgress": 0
         }
-      ],
-      "waiting": [
+      ,
+      "waiting": 
         {
           "id": 1,
           "totalWaitingActivities": 3
         }
-      ],
-      "completed": [
+      ,
+      "completed": 
         {
           "id": 1,
           "totalCompletedActivities": 21
         }
-      ]
     }
   ]
 }

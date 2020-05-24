@@ -4,8 +4,9 @@ import OpportunityCard from '../OpportunityCard/OpportunityCard';
 import FinancialTitlesCard from '../FinancialTitlesCard/FinancialTitlesCard';
 import ChartsCard from '../ChartsCard/ChartsCard';
 import Loading from '../Loading/Loading';
-import './CustomerDetail.css';
+import ActivitiesCard from '../ActivitiesCard/ActivitiesCard';
 import { MapsCard } from '../MapsCard/MapsCard';
+import './CustomerDetail.css';
 
 class CustomerDetail extends React.Component {
     
@@ -37,6 +38,7 @@ class CustomerDetail extends React.Component {
                     <OpportunityCard />
                     <FinancialTitlesCard />
                     <MapsCard />
+                    <ActivitiesCard />
                 </div>        
             </>
         )

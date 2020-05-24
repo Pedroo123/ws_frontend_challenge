@@ -33,13 +33,37 @@ export default class CustomerCard extends React.Component {
             })
     }
 
+    renderCustomer = () => {
+        const { customer } = this.state;
+
+        return <Card>
+                <h3>General Info</h3>
+                <Avatar />
+                <div className="Customer-name">
+                    <span className="Name">Name: {customer.name}</span>
+                </div>
+                <div className="Customer-initialValue-container">
+                    <span className="Customer-initialValue">Initial Value: {customer.initialValue}</span>
+                </div>
+                <div className="Customer-finalValue-container">
+                    <span className="Customer-finalValue">Final Value: {customer.finalValue}</span>
+                </div>
+                <div className="Customer-phone-container">
+                    <span className="Customer-phone">Phone: {customer.phone}</span>
+                </div>
+                <div className="Customer-email-container">
+                    <span className="Customer-email">Email: {customer.email}</span>
+                </div>
+            </Card>
+    }
+
     
     componentDidMount() {
         this.fetchCustomerData();
     }
 
     render() {
-        const { customer, error, loading } = this.state;
+        const { error, loading } = this.state;
         if (loading) {
             return <div><Loading /></div>
         }
@@ -50,24 +74,7 @@ export default class CustomerCard extends React.Component {
 
         return(
             <div className="Customer-Card">
-                <Card>
-                    <Avatar />
-                    <div className="Customer-name">
-                        <span className="Name">Name: {customer.name}</span>
-                    </div>
-                    <div className="Customer-initialValue-container">
-                        <span className="Customer-initialValue">Initial Value: {customer.initialValue}</span>
-                    </div>
-                    <div className="Customer-finalValue-container">
-                        <span className="Customer-finalValue">Final Value: {customer.finalValue}</span>
-                    </div>
-                    <div className="Customer-phone-container">
-                        <span className="Customer-phone">Phone: {customer.phone}</span>
-                    </div>
-                    <div className="Customer-email-container">
-                        <span className="Customer-email">Email: {customer.email}</span>
-                    </div>
-                </Card>
+                {this.renderCustomer()}
             </div>
         )
     }

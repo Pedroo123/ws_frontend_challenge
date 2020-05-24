@@ -16,7 +16,7 @@ const Card = (props) => {
 }
 
 Card.defaultProps = {
-    width: '420px',
+    width: '320px',
     height: '240px'
 }
 

@@ -55,10 +55,11 @@ export default class CharsCard extends React.Component {
 
         return (
             <div className="Customer-chart-card">
-                <Card width={520} height={320}>
+                <Card>
+                    <h3>Vendas</h3>
                     <BarChart
-                        width={500}
-                        height={300}
+                        width={300}
+                        height={200}
                         data={chartData}
                         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
                     >
