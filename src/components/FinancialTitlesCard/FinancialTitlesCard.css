@@ -1,0 +1,101 @@
+.Vencidos {
+    display: flex;
+    flex-direction: row;
+}
+
+.Para-vencer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+}
+
+.Pagos {
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+}
+
+.square-vencidos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: red;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.Financial-titles-vencidos-value {
+    padding-left: 10px;
+    color: red;
+    font-size: large;
+}
+
+.financial-titles-vencidos-text {
+    position: relative;
+    top: 23px;
+    right: 70px;
+    font-size: small;
+    color: gray;
+}
+
+.square-para-vencer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: blue;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.Financial-titles-para-vencer-value {
+    padding-left: 10px;
+    color: blue;
+    font-size: large;
+}
+
+.financial-titles-para-vencer-text {
+    position: relative;
+    top: 23px;
+    right: 70px;
+    font-size: small;
+    color: gray;
+}
+
+.square-pagos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: green;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.Financial-titles-pagos-value {
+    padding-left: 10px;
+    color: green;
+    font-size: large;
+}
+
+.financial-titles-pagos-text {
+    position: relative;
+    top: 23px;
+    right: 70px;
+    font-size: small;
+    color: gray;
+}
+
+.financial-titles-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+}

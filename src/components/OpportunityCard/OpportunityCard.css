@@ -1,0 +1,100 @@
+.opportunities-container {
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.Opportunities-won {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+.square-won {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: green;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.Opportunities-won-value {
+    padding-left: 10px;
+    font-size: medium;
+    color: green;
+}
+
+.Opportunities-lost {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+}
+
+.square-lost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: red;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.Opportunities-lost-value {
+    padding-left: 10px;
+    font-size: medium;
+    color: red;
+}
+
+.Opportunities-open {
+    display: flex;
+    flex-direction: row;
+    margin: 25px 10px;
+}
+
+.square-open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: blue;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.Opportunities-open-value {
+    padding-left: 10px;
+    font-size: medium;
+    color: blue;
+}
+
+.Opportunities-canceled {
+    display: flex;
+    flex-direction: row;
+    margin: 25px auto;
+}
+
+.square-canceled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: grey;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.opportunities-canceled-value {
+    padding-left: 10px;
+    font-size: medium;
+    color: gray;
+}

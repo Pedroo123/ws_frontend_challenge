@@ -1,0 +1,133 @@
+.activities-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+.activities-total {
+    display: flex;
+    flex-direction: row;
+}
+
+.square-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: #000;
+    font-size: small;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.activities-total-text {
+    display: flex;
+    align-content: center;
+    padding-left: 10px;
+    font-size: small;
+    width: 35px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: #d3d3d3;
+    margin-right: 10px;
+}
+
+.activities-late {
+    display: flex;
+    flex-direction: row;
+}
+
+.square-late {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: red;
+    font-size: small;
+    font-weight: bold;
+}
+
+.activities-late-text {
+    padding-left: 8px;
+    margin-right: 10px;
+}
+
+.activities-in-progress {
+    display: flex;
+    flex-direction: row;
+}
+
+.square-in-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: blue;
+    font-size: small;
+    font-weight: bold;   
+}
+
+.activities-in-progress-text {
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+.activities-waiting {
+    display: flex;
+    flex-direction: row;
+}
+
+.square-waiting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: yellow;
+    font-size: small;
+    font-weight: bold;   
+}
+
+.activities-waiting-text {
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+.activities-completed {
+    display: flex;
+    flex-direction: row;
+}
+
+.square-completed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: green;
+    font-size: small;
+    font-weight: bold;   
+}
+
+.activities-completed-text {
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+.timeline-container {
+    margin-top: 25px;
+}
+
+.search-container {
+    margin-left: 4px;
+}
