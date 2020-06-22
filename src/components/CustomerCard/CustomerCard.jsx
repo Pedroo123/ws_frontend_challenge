@@ -4,6 +4,9 @@ import { responseHandle } from '../Helpers/helpers';
 import Loading from '../Loading/Loading';
 import Card from '../Card/Card';
 import Avatar from '../Avatar/Avatar';
+import Phone from '@material-ui/icons/Phone';
+import Mail from '@material-ui/icons/Mail';
+import Person from '@material-ui/icons/Person';
 import './CustomerCard.css';
 
 export default class CustomerCard extends React.Component {
@@ -40,7 +43,7 @@ export default class CustomerCard extends React.Component {
                 <h3>General Info</h3>
                 <Avatar />
                 <div className="Customer-name">
-                    <span className="Name">Name: {customer.name}</span>
+                    <span className="Name"><Person /> - {customer.name}</span>
                 </div>
                 <div className="Customer-initialValue-container">
                     <span className="Customer-initialValue">Initial Value: {customer.initialValue}</span>
@@ -49,15 +52,15 @@ export default class CustomerCard extends React.Component {
                     <span className="Customer-finalValue">Final Value: {customer.finalValue}</span>
                 </div>
                 <div className="Customer-phone-container">
-                    <span className="Customer-phone">Phone: {customer.phone}</span>
+                    <span className="Customer-phone"><Phone /> - {customer.phone}</span>
                 </div>
                 <div className="Customer-email-container">
-                    <span className="Customer-email">Email: {customer.email}</span>
+                    <span className="Customer-email"><Mail /> - {customer.email}</span>
                 </div>
             </Card>
     }
 
-    
+            
     componentDidMount() {
         this.fetchCustomerData();
     }
