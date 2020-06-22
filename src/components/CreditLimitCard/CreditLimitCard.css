@@ -1,0 +1,40 @@
+.credit-limit-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.granted-container {
+    display: contents;
+}
+
+.total-granted {
+    font-size: large;
+    font-weight: bold;
+    color: green;
+    margin-left: 15px;
+}
+
+.granted-text {
+    padding-left: 15px;
+    font-size: smaller;
+    color: gray;
+}
+
+.avaliabe-container {
+    display: contents;
+}
+
+.total-avaliabe {
+    font-size: large;
+    font-weight: bold;
+    color: blue;
+    margin-left: 15px;
+}
+
+.avaliable-text {
+    padding-left: 15px;
+    font-size: smaller;
+    color: gray;
+}
+
+

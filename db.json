@@ -1,74 +1,110 @@
 {
-  "customers": [
+  "customer": 
     {
+      "name": "Pedro Brancalhao",
+      "age": 24,
+      "initialValue": 1500,
+      "finalValue": 8560,
+      "phone": "45 9 9998 4444",
+      "email": "pedro@teste.com"
+    }
+  ,
+  "financialTitles": [
+    {
+      "vencidos": {
         "id": 1,
-        "name": "Pedro Brancalhao",
-        "age": 24,
-        "initialValue": 1500,
-        "finalValue": 8560
-    },
-    {
-        "id": 2,
-        "name": "Sullivan",
-        "age": 3,
-        "initialValue": 2000,
-        "finalValue": 10800
-    },
-    {
+        "totalVencidos": 3,
+        "totalVencidosValue": 2260
+      },
+      "paraVencer": {
+          "id": 2,
+          "totalParaVencer": 1,
+          "totalParaVencerValue": 5000
+      },
+      "pagos": {
         "id": 3,
-        "name": "Pepper",
-        "age": 3,
-        "initialValue": 6000,
-        "finalValue": 3500
-    },
+        "totalPagos": 2,
+        "totalPagosValue": 3800
+      }
+    }
+  ],
+  "opportunities": [
     {
-        "id": 4,
-        "name": "Eros",
-        "age": 2,
-        "initialValue": 5000,
-        "finalValue": 14210
-    },
+      "won": 
+        {
+          "id": 1,
+          "totalWonOpportunities": 5,
+          "totalValue": 3000
+        }
+      ,
+      "lost": 
+        {
+          "id": 2,
+          "totalLostOpportunities": 2,
+          "totalLostValue": 1000
+        }
+      ,
+      "open": 
+        {
+          "id": 3,
+          "totalOpenOpportunities": 1,
+          "totalOpenValue": 500
+        }
+      ,
+      "canceled": 
+        {
+          "id": 4,
+          "totalCanceledOpportunities": 3,
+          "totalCanceledValue": 2348
+        }
+    }
+  ],
+  "activities": [
     {
-      "id": 5,
-      "name": "Yui",
-      "age": 2,
-      "initialValue": 5000,
-      "finalValue": 14210
-    },
+      "total": 
+        {
+          "id": 1,
+          "totalActivities": 25
+        }
+      ,
+      "late": 
+        {
+          "id": 2,
+          "totalLateActivities": 1
+        }
+      ,
+      "inProgress": 
+        {
+          "id": 3,
+          "totalActivitiesInProgress": 0
+        }
+      ,
+      "waiting": 
+        {
+          "id": 4,
+          "totalWaitingActivities": 3
+        }
+      ,
+      "completed": 
+        {
+          "id": 5,
+          "totalCompletedActivities": 21
+        }
+    }
+  ],
+  "creditLimit": [
     {
-      "id": 6,
-      "name": "Edward",
-      "age": 2,
-      "initialValue": 5000,
-      "finalValue": 14210
-    },
-    {
-      "id": 7,
-      "name": "Bakugou",
-      "age": 16,
-      "initialValue": 230,
-      "finalValue": 1025
-    },
-    {
-      "id": 8,
-      "name": "Kirishima",
-      "age": 16,
-      "initialValue": 8000,
-      "finalValue": 14210
-    },
-    {
-      "id": 9,
-      "name": "Tracer",
-      "age": 30,
-      "initialValue": 9000,
-      "finalValue": 5000
-    },
-    {
-      "id": 10,
-      "name": "Reinhardt",
-      "age": 55,
-      "initialValue": 10000,
-      "finalValue": 11000
+      "granted": 
+      {
+        "id": 1,
+        "totalGrantedValue": 15000
+      }
+      ,
+      "avaliable": 
+      {
+        "id": 2,
+        "totalAvaliableValue": 5000
+      }
     }
   ]
 }

@@ -1,0 +1,15 @@
+.map-container {
+    margin-left: 5px;
+}
+
+.location-text {
+    position: absolute;
+    z-index: 1;
+    top: 207px;
+    color: gray;
+    font-size: large;
+}
+
+.icon-container {
+    margin-left: 30px;
+}

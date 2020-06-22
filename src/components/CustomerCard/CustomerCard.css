@@ -1,0 +1,57 @@
+.Customer-card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+h3 {
+    padding: 4px;
+}
+
+.Customer-name {
+    font-weight: bold;
+    position: relative;
+    float: right;
+    right: 61px;
+    bottom: 50px;
+    color: gray;
+}
+
+.Name {
+    font-size: 14px;
+}
+
+.Customer-initialValue-container {
+    position: relative;
+    top: 80px;
+    left: 6px;
+    color: red;
+    font-weight: bold;
+}
+
+.Customer-finalValue-container {
+    position: relative;
+    float: right;
+    left: 140px;
+    top: 60px;
+    color: green;
+    font-weight: bold;
+}
+
+.Customer-phone-container {
+    position: relative;
+    float: left;
+    bottom: 10px;
+    left: 90px;
+    font-weight: bold;
+    color: gray;
+}
+
+.Customer-email-container {
+    position: relative;
+    float: right;
+    bottom: 50px;
+    right: 55px;
+    font-weight: bold;
+    color: gray;
+}
