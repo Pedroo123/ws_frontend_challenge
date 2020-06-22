@@ -1,0 +1,150 @@
+.timeline-header-1 {
+    padding-left: 10px;
+}
+
+.timeline-circle-1 {
+    display: flex;
+    flex-direction: row;
+    width: 32px;
+    height: 32px;
+    border-radius: 15px;
+    background-color: green;
+}
+
+.timeline-text-1 {
+    padding-left: 40px;
+    font-size: larger;
+}
+
+.timeline-content-1 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 65px;
+}
+
+.timeline-header-2 {
+    margin-top: 27px;
+    padding-left: 10px;
+}
+
+.timeline-circle-2 {
+    display: flex;
+    flex-direction: row;
+    width: 32px;
+    height: 32px;
+    border-radius: 15px;
+    background-color: red;
+}
+
+.timeline-text-2 {
+    padding-left: 40px;
+    font-size: larger;
+}
+
+.timeline-content-2 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 76px;
+}
+
+.timeline-header-3 {
+    margin-top: 27px;
+    padding-left: 10px;
+}
+
+.timeline-circle-3 {
+    display: flex;
+    flex-direction: row;
+    width: 32px;
+    height: 32px;
+    border-radius: 15px;
+    background-color: blue;
+}
+
+.timeline-text-3 {
+    padding-left: 40px;
+    font-size: larger;
+}
+
+.timeline-content-3 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+}
+
+.activitie-completed-1 {
+    font-weight: bolder;
+}
+
+.activitie-completed-2 {
+    font-size: smaller;
+    color: gray;
+}
+
+.activitie-canceled-1 {
+    font-weight: bolder;
+}
+
+.activitie-canceled-2 {
+    font-size: smaller;
+    color: gray;
+}
+
+.activitie-waiting-1 {
+    font-weight: bolder;
+}
+
+.activitie-waiting-2 {
+    font-size: smaller;
+    color: gray;
+}
+
+.activitie-waiting-3 {
+    font-weight: bolder;
+}
+
+.activitie-waiting-4 {
+    font-size: smaller;
+    color: gray;
+}
+
+.timeline-ruler-1 {
+    position: absolute;
+    width: 1px;
+    background-color: gray;
+    height: 15%;
+    margin-left: 15px;
+}
+
+.timeline-ruler-2 {
+    position: absolute;
+    width: 1px;
+    background-color: gray;
+    height: 15%;
+    margin-left: 15px;
+}
+
+.call-icon {
+    position: absolute;
+    left: 40px;
+    color: green;
+}
+
+.mail-icon {
+    position: absolute;
+    left: 40px;
+    color: red;
+}
+
+.meeting-icon {
+    position: absolute;
+    left: 40px;
+    color: blue;
+}
+
+.call-icon-2 {
+    position: absolute;
+    left: 40px;
+    bottom: 3px;
+    color: blue;
+}
