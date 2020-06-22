@@ -1,8 +1,10 @@
 import React from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import Card from '../Card/Card';
+import './MapsCard.css';
+import Place from '@material-ui/icons/Place';
 
-export class MapsCard extends React.Component {
+class MapsCard extends React.Component {
 
     constructor(props) {
         super(props);
@@ -21,32 +23,43 @@ export class MapsCard extends React.Component {
                 lat: store.latitude,
                 lng: store.longitude
             }}
-            onClick={ () => console.log('Clicado') } />
+            onClick={ () => alert("Current Location: \n Jaragua do Sul-SC") } />
         })
     }
 
     render() {
         const mapStyle = {
-            width: '500px',
-            height: '300px'
+            width: '310px',
+            height: '160px'
         }
         
         return (
             <Card>
-                <Map
-                    google={this.props.google}
-                    zoom={6}
-                    style={mapStyle}
-                    initialCenter={{lat: -26.483429, lng: 49.0961959 }}
-                >
-                {this.renderMarker()}
-                </Map>
+                <h3>Location</h3>
+                <div className="map-container">
+                    <Map
+                        google={this.props.google}
+                        zoom={3}
+                        style={mapStyle}
+                        initialCenter={{lat: -26.483429, lng: 49.0961959 }}
+                    >
+                    {this.renderMarker()}
+                    </Map>
+                </div>
+                <div className="marker-container">
+                    <span className="location-text"> 
+                        <span className="icon-container"><Place /></span>
+                    Jaragua do Sul - SC
+                    </span>
+                </div>
             </Card>
         );
     }
 
 }
 
-export default GoogleApiWrapper({
+const GoogleMap = GoogleApiWrapper({
     apiKey: 'AIzaSyDEDhiDFqiSqwBn6fbBd8QJRTQpgKJjYhE'
 }) (MapsCard)
+
+export default GoogleMap;

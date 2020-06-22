@@ -1,10 +1,9 @@
 import React from 'react';
 import { API_URL } from '../../config';
 import { responseHandle } from '../Helpers/helpers';
-import { Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart } from 'recharts';
+import { Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart } from 'recharts';
 import Loading from '../Loading/Loading';
 import Card from '../Card/Card';
-import './ChartsCard.css';
 
 export default class CharsCard extends React.Component {
 
@@ -56,7 +55,7 @@ export default class CharsCard extends React.Component {
         return (
             <div className="Customer-chart-card">
                 <Card>
-                    <h3>Vendas</h3>
+                    <h3>Sales</h3>
                     <BarChart
                         width={300}
                         height={200}
