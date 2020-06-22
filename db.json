@@ -17,12 +17,12 @@
         "totalVencidosValue": 2260
       },
       "paraVencer": {
-          "id": 1,
+          "id": 2,
           "totalParaVencer": 1,
           "totalParaVencerValue": 5000
       },
       "pagos": {
-        "id": 1,
+        "id": 3,
         "totalPagos": 2,
         "totalPagosValue": 3800
       }
@@ -39,22 +39,23 @@
       ,
       "lost": 
         {
-          "id": 1,
+          "id": 2,
           "totalLostOpportunities": 2,
           "totalLostValue": 1000
         }
       ,
       "open": 
         {
-          "id": 1,
+          "id": 3,
           "totalOpenOpportunities": 1,
           "totalOpenValue": 500
         }
       ,
       "canceled": 
         {
-          "id": 1,
-          "totalCanceledOpportunities": 3
+          "id": 4,
+          "totalCanceledOpportunities": 3,
+          "totalCanceledValue": 2348
         }
     }
   ],
@@ -68,27 +69,42 @@
       ,
       "late": 
         {
-          "id": 1,
+          "id": 2,
           "totalLateActivities": 1
         }
       ,
       "inProgress": 
         {
-          "id": 1,
+          "id": 3,
           "totalActivitiesInProgress": 0
         }
       ,
       "waiting": 
         {
-          "id": 1,
+          "id": 4,
           "totalWaitingActivities": 3
         }
       ,
       "completed": 
         {
-          "id": 1,
+          "id": 5,
           "totalCompletedActivities": 21
         }
+    }
+  ],
+  "creditLimit": [
+    {
+      "granted": 
+      {
+        "id": 1,
+        "totalGrantedValue": 15000
+      }
+      ,
+      "avaliable": 
+      {
+        "id": 2,
+        "totalAvaliableValue": 5000
+      }
     }
   ]
 }
