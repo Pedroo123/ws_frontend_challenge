@@ -5,7 +5,8 @@ import FinancialTitlesCard from '../FinancialTitlesCard/FinancialTitlesCard';
 import ChartsCard from '../ChartsCard/ChartsCard';
 import Loading from '../Loading/Loading';
 import ActivitiesCard from '../ActivitiesCard/ActivitiesCard';
-import { MapsCard } from '../MapsCard/MapsCard';
+import GoogleMap from '../MapsCard/MapsCard';
+import CreditLimitCard from '../CreditLimitCard/CreditLimitCard';
 import './CustomerDetail.css';
 
 class CustomerDetail extends React.Component {
@@ -32,14 +33,20 @@ class CustomerDetail extends React.Component {
 
         return (
             <>
-                <div className="Right-card-container">
-                    <CustomerCard />
-                    <ChartsCard />
-                    <OpportunityCard />
-                    <FinancialTitlesCard />
-                    <MapsCard />
-                    <ActivitiesCard />
-                </div>        
+                <div className="wrapper">
+                    <div className="left-card-container">
+                        <CustomerCard />
+                        <ChartsCard />
+                        <OpportunityCard />
+                        <GoogleMap />
+                        <FinancialTitlesCard />
+                        <CreditLimitCard />
+                    </div>
+
+                    <div className="right-card-container">
+                        <ActivitiesCard />
+                    </div>
+                </div>
             </>
         )
     }
